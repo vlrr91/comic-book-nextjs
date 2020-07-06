@@ -1,12 +1,17 @@
 import Head from 'next/head';
+
+// Components
 import Header from '../Header';
 
-export default function Layout({ children }) {
+// Styles
+import styles from './Container.module.scss';
+
+export default function Container({ children }) {
   return (
     <>
       <Head>Comic Book</Head>
       <Header></Header>
-      <main>
+      <main className={styles.mainApp}>
         {children}
       </main>
     </>

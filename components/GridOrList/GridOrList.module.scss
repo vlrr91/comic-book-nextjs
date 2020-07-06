@@ -1,0 +1,25 @@
+@import 'vars.scss';
+
+.content {
+  border-top: 1px solid $textSecondary;
+  border-bottom: 1px solid $textSecondary;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+
+.titleContent {
+  margin: 0;
+}
+
+.selectLayout {
+  display: flex;
+  padding-left: 0;
+  list-style-type: none;
+
+  li {
+    padding: .5em 1em;
+    cursor: pointer;
+  }
+}
