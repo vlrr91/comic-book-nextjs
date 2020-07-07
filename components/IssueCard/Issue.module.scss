@@ -1,0 +1,61 @@
+@import "_vars.scss";
+
+.card {
+  text-align: center;
+  padding-bottom: 1.5em;
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid $textSecondary;
+
+  .cardTitle,
+  .cardDate {
+    margin: 0;
+  }
+
+  .cardTitle {
+    color: $textPrimary;
+  }
+
+  .cardDate {
+    color: $textSecondary;
+  }
+
+  .cardImage{
+    width: 220px;
+  }
+}
+
+
+
+// Styles by layout type
+.card.cardList {
+  display: grid;
+  grid-template-columns: 220px auto;
+
+  @media screen and (max-width: 640px) {
+    grid-template-columns: 1fr;
+
+    .cardImage {
+      margin: 0 auto 1em;
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+}
+
+.card.cardGrid {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border: none;
+
+  @media screen and (max-width: 440px) {
+    .cardImage {
+      max-width: 300px;
+    }
+  }
+}
+
+.cardGrid {
+  .cardImage {
+    width: 100%;
+  }
+}

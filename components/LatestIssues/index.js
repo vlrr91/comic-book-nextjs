@@ -1,6 +1,9 @@
+import { useState } from 'react';
+
 // Components
-import GridOrList from "../GridOrList";
-import { useState } from "react";
+import GridOrList from '../GridOrList';
+import ListLayout from '../ListLayout';
+import GridLayout from '../GridLayout';
 
 // Config
 import { layoutTypes } from '../../config';
@@ -11,19 +14,19 @@ export default function LatestIssues({ lastIssues }) {
   function renderLayout(lastIssues) {
     if (layout === layoutTypes.grid) {
       return (
-        <p>grid</p>
+        <GridLayout lastIssues={lastIssues} />
       );
     }
 
     return (
-      <p>list</p>
+      <ListLayout lastIssues={lastIssues} />
     );
   }
 
   return (
     <div>
-      <GridOrList title="Latest Issues" setLayout={setLayout} />
-      {renderLayout()}
+      <GridOrList title="Latest Issues" setLayout={setLayout} layout={layout} />
+      {renderLayout(lastIssues)}
     </div>
   );
 }

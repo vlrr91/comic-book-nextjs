@@ -17,6 +17,7 @@ Home.getInitialProps = async ctx => {
 
   const lastIssues = data.results.map(item => {
     const {
+      id,
       volume,
       issue_number,
       image,
@@ -24,6 +25,7 @@ Home.getInitialProps = async ctx => {
     } = item;
 
     return {
+      id,
       name: `${volume.name} #${issue_number}`,
       image: image.original_url,
       dateAdded: date_added
