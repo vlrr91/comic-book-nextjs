@@ -4,7 +4,6 @@
   display: flex;
   justify-content: space-between;
 
-  
   @media screen and (max-width: 768px) {
     flex-direction: column;
   }
@@ -16,8 +15,11 @@
 
     @media screen and (max-width: 960px) {
       width: 300px;
-      order: -1;
       margin: 1em auto;
+    }
+
+    @media screen and (max-width: 768px) {
+      order: -1;
     }
   }
 
@@ -32,21 +34,32 @@
     border-bottom: 1px solid $textPrimary;
     padding-bottom: .5em;
   }
+}
 
-  .detailImages {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.detailImages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
-    @media screen and (max-width: 640px) {
-      grid-template-columns: 1fr;
-    }
+  @media screen and (max-width: 640px) {
+    grid-template-columns: 1fr;
   }
 }
 
-.backHome a {
-  color: $textAccent;
-  text-decoration: none;
+.backHome {
+  
   border: 1px solid $textAccent;
-  padding: .5em 1em;
   border-radius: 5px;
+  display: table;
+
+  a {
+    display: block;
+    color: $textAccent;
+    text-decoration: none;
+    padding: .5em 1em;
+
+    &:hover {
+      background-color: $textAccent;
+      color: white;
+    }
+  }
 }

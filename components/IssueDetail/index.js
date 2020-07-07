@@ -11,10 +11,10 @@ function renderImages(data) {
     return <p>Elements not found</p>;
   }
 
-  return data.map(character => (
+  return data.map(item => (
     <ImagesGrid
-      info={character}
-      key={character.name}
+      info={item}
+      key={item.name}
     />
   ));
 }

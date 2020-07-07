@@ -1,5 +1,5 @@
 // Components
-import IssueCard from '../IssueCard';
+import IssueCard from '../../IssueCard';
 
 // Config
 import { layoutTypes } from '../../../config';
@@ -11,7 +11,10 @@ export default function GridLayout({ lastIssues }) {
   return (
     <div className={styles.gridLayout}>
        {lastIssues.map(issue =>
-        <IssueCard issue={issue} layoutType={layoutTypes.grid} key={issue.id} />
+        <IssueCard
+          issue={issue}
+          layoutType={layoutTypes.grid}
+          key={issue.id} />
       )}
     </div>
   );

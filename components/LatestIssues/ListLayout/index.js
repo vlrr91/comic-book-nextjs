@@ -11,7 +11,10 @@ export default function ListLayout({ lastIssues }) {
   return (
     <div className={styles.listLayout}>
       {lastIssues.map(issue =>
-        <IssueCard issue={issue} layoutType={layoutTypes.list} key={issue.id} />
+        <IssueCard
+          issue={issue}
+          layoutType={layoutTypes.list}
+          key={issue.id} />
       )}
     </div>
   )
