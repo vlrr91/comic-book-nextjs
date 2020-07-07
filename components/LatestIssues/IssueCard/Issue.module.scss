@@ -5,6 +5,7 @@
   padding-bottom: 1.5em;
   margin-bottom: 1.5em;
   border-bottom: 1px solid $textSecondary;
+  cursor: pointer;
 
   .cardTitle,
   .cardDate {
@@ -23,8 +24,6 @@
     width: 220px;
   }
 }
-
-
 
 // Styles by layout type
 .card.cardList {

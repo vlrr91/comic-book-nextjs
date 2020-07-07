@@ -1,8 +1,8 @@
 // Components
-import IssueCard from '../IssueCard';
+import IssueCard from '../../IssueCard';
 
 // Config
-import { layoutTypes } from '../../config';
+import { layoutTypes } from '../../../config';
 
 // Styles
 import styles from './ListLayout.module.scss';

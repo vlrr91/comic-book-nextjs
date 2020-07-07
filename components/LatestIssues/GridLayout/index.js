@@ -2,7 +2,7 @@
 import IssueCard from '../IssueCard';
 
 // Config
-import { layoutTypes } from '../../config';
+import { layoutTypes } from '../../../config';
 
 // Styles
 import styles from './GridLayout.module.scss';

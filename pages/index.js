@@ -1,3 +1,6 @@
+import fetch from 'isomorphic-fetch';
+
+// Components
 import Layout from "../components/Container";
 import LatestIssues from "../components/LatestIssues";
 

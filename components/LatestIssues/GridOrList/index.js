@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Config
-import { layoutTypes } from '../../config';
+import { layoutTypes } from '../../../config';
 
 // Styles
 import styles from './GridOrList.module.scss';

@@ -1,0 +1,52 @@
+@import '_vars.scss';
+
+.detailIssue {
+  display: flex;
+  justify-content: space-between;
+
+  
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  .detailImage {
+    width: 400px;
+    display: block;
+    max-width: 100%;
+
+    @media screen and (max-width: 960px) {
+      width: 300px;
+      order: -1;
+      margin: 1em auto;
+    }
+  }
+
+  .detailInfo {
+    width: 100%;
+    margin-right: 1em;
+  }
+
+  .detailTitle {
+    width: 100%;
+    font-size: 1.4em;
+    border-bottom: 1px solid $textPrimary;
+    padding-bottom: .5em;
+  }
+
+  .detailImages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @media screen and (max-width: 640px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.backHome a {
+  color: $textAccent;
+  text-decoration: none;
+  border: 1px solid $textAccent;
+  padding: .5em 1em;
+  border-radius: 5px;
+}

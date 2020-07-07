@@ -1,5 +1,5 @@
 // Config
-import { layoutTypes } from '../../config';
+import { layoutTypes } from '../../../config';
 
 // Styles
 import styles from './Issue.module.scss';

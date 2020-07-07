@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
 // Components
-import GridOrList from '../GridOrList';
-import ListLayout from '../ListLayout';
-import GridLayout from '../GridLayout';
+import GridOrList from './GridOrList';
+import ListLayout from './ListLayout';
+import GridLayout from './GridLayout';
 
 // Config
 import { layoutTypes } from '../../config';
