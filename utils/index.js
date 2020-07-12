@@ -1,2 +1,2 @@
-export { fetchHome } from './fetch-home';
-export { fetchIssue } from './fetch-issue';
+export { getLastIssues } from './fetch-home';
+export { getIssue, getAllIssueIds } from './fetch-issue';

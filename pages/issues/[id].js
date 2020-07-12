@@ -3,7 +3,7 @@ import IssueDetail from '../../components/IssueDetail';
 import Container from '../../components/Container';
 
 // Utils
-import { fetchIssue } from '../../utils';
+import { getIssue, getAllIssueIds } from '../../utils';
 
 export default function Issue({ issue }) {
   return (
@@ -13,8 +13,17 @@ export default function Issue({ issue }) {
   );
 }
 
-export async function getServerSideProps(context) {
-  const issue = await fetchIssue(context.query.id);
+export async function getStaticPaths() {
+  const paths = await getAllIssueIds();
+
+  return {
+    paths,
+    fallback: false
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const issue = await getIssue(params.id);
 
   return {
     props: { issue },

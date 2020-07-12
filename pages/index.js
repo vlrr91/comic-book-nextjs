@@ -3,7 +3,7 @@ import Layout from "../components/Container";
 import LatestIssues from "../components/LatestIssues";
 
 // Utils
-import { fetchHome } from '../utils';
+import { getLastIssues } from '../utils';
 
 export default function Home({ lastIssues }) {
   return (
@@ -13,8 +13,8 @@ export default function Home({ lastIssues }) {
   )
 }
 
-export async function getServerSideProps(context) {
-  const lastIssues = await fetchHome();
+export async function getStaticProps() {
+  const lastIssues = await getLastIssues();
 
   return {
     props: { lastIssues },

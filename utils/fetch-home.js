@@ -4,7 +4,7 @@ import { fetcher } from './fetcher';
 // Config
 import { API_KEY } from '../config';
 
-export async function fetchHome() {
+export async function getLastIssues() {
   const url = `https://comicvine.gamespot.com/api/issues/?api_key=${API_KEY}&format=json&limit=20`;
   const data = await fetcher(url);
 

@@ -1,5 +1,6 @@
 // Utils
 import { fetcher } from './fetcher';
+import { getLastIssues } from './index';
 
 // Config
 import { API_KEY } from '../config';
@@ -18,7 +19,19 @@ async function getDataDetails(data) {
   return { name, imageIcon };
 }
 
-export async function fetchIssue(id) {
+export async function getAllIssueIds() {
+  const lastIssues = await getLastIssues();
+
+  return lastIssues.map(({ id }) => {
+    return {
+      params: {
+        id: id.toString()
+      }
+    };
+  });
+}
+
+export async function getIssue(id) {
   const url = `https://comicvine.gamespot.com/api/issue/4000-${id}/?api_key=${API_KEY}&format=json&limit=20`;
   const data = await fetcher(url);
 
